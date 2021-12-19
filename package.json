@@ -1,0 +1,15 @@
+{
+  "name": "mc-wrapper",
+  "version": "1.0.0",
+  "description": "minecraft websocket wrapper",
+  "main": "mc-wrapper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^5.3.0",
+    "ws": "^8.3.0"
+  }
+}
