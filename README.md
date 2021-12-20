@@ -20,11 +20,13 @@ image from https://github.com/itzg/docker-minecraft-bedrock-server
 
 4. run the server
 
-        docker run --rm -it -v $(pwd)/data:/data --env-file .env --name mcb-server -p 19132:19132/udp mcb-server
+        docker run --rm -it -d -v $(pwd)/data:/data --env-file .env --name mcb-server -p 19132:19132/udp mcb-server
 
 # running backups
 
     docker exec -it mcb-server node /opt/mc-backup.js
+
+    (crontab -u USERNAME -l ; echo "5 4 * * *  /usr/bin/docker exec -it mcb-server node /opt/mc-backup.js") | crontab -u USERNAME -
 
 look in `data/backups` for the zip files
 
