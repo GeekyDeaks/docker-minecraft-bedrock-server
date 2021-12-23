@@ -24,9 +24,9 @@ image from https://github.com/itzg/docker-minecraft-bedrock-server
 
 # running backups
 
-    docker exec -it mcb-server node /opt/mc-backup.js
+    docker exec -i mcb-server node /opt/mc-backup.js
 
-    (crontab -u USERNAME -l ; echo "5 4 * * *  /usr/bin/docker exec -it mcb-server node /opt/mc-backup.js") | crontab -u USERNAME -
+    (crontab -u USERNAME -l ; echo "5 4 * * *  /usr/bin/docker exec -i mcb-server node /opt/mc-backup.js") | crontab -u USERNAME -
 
 look in `data/backups` for the zip files
 
